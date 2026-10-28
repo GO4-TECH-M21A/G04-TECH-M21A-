@@ -1,45 +1,761 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GO4 TECH M21A</title>
-<style>
-  body{margin:0;font-family:Arial,sans-serif;background:#080808;color:#fff;text-align:center}
-  .gold{color:#D4AF37}
-  .header{padding:40px 20px;background:#1a1a1a;border-bottom:3px solid #D4AF37}
-  .logo{width:140px;height:140px;background:#111;border:3px solid #D4AF37;border-radius:20px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:60px;font-weight:bold;color:#D4AF37}
-  h1{margin:10px 0;font-size:32px}
-  .services{padding:40px 20px;max-width:500px;margin:0 auto}
-  .service-card{background:#111;border:1px solid #D4AF37;border-radius:15px;padding:20px;margin:15px 0;text-align:left;display:flex;gap:15px}
-  .contact-box{background:#111;border:2px solid #D4AF37;border-radius:15px;padding:25px;margin:30px 20px}
-  .btn{display:block;background:#25D366;color:#fff;padding:18px;border-radius:50px;text-decoration:none;font-weight:bold;font-size:18px;margin:15px 0}
-  .btn-gold{display:block;background:#D4AF37;color:#000;padding:18px;border-radius:50px;text-decoration:none;font-weight:bold;font-size:18px;margin:15px 0}
-  .footer{background:#D4AF37;color:#000;padding:15px;font-weight:bold}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="GO4 TECH M21A : innovation, programmation et technologies numériques.">
+  <title>GO4 TECH M21A | Imagine. Crée. Innove.</title>
+
+  <style>
+    :root {
+      --black: #090909;
+      --panel: #121212;
+      --gold: #D4AF37;
+      --light-gold: #F5DF91;
+      --white: #F7F5EF;
+      --muted: #AAA8A1;
+      --line: rgba(212,175,55,.24);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    .gold {
+      color: var(--gold);
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: .76rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    /* NAVIGATION */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(9,9,9,.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-size: 1.1rem;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .brand-mark {
+      width: 43px;
+      height: 43px;
+      border: 1px solid var(--gold);
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      color: var(--gold);
+      font-size: .85rem;
+      box-shadow: 0 0 20px rgba(212,175,55,.12);
+    }
+
+    .brand small {
+      display: block;
+      color: var(--muted);
+      font-size: .59rem;
+      letter-spacing: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      font-size: .9rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      color: var(--gold);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 620px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 80% 45%,
+          rgba(212,175,55,.13), transparent 42%),
+        linear-gradient(135deg, #090909, #11100c 65%, #090909);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      opacity: .18;
+      background-image:
+        linear-gradient(rgba(212,175,55,.15) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(212,175,55,.15) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(to right, transparent, black);
+    }
+
+    .hero-content {
+      max-width: 760px;
+      padding: 90px 0;
+      animation: appear 1s ease both;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.7rem, 8vw, 5.7rem);
+      line-height: 1.08;
+      letter-spacing: -3px;
+      margin: 22px 0;
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+      text-shadow: 0 0 35px rgba(212,175,55,.25);
+    }
+
+    .hero p {
+      color: #C1BFB8;
+      max-width: 560px;
+      font-size: 1.05rem;
+      margin-bottom: 30px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 13px 21px;
+      border-radius: 7px;
+      font-weight: 700;
+      font-size: .9rem;
+      transition: transform .25s, box-shadow .25s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-primary {
+      color: #111;
+      background: linear-gradient(120deg, var(--light-gold), var(--gold));
+      box-shadow: 0 5px 25px rgba(212,175,55,.16);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--line);
+      color: var(--white);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold);
+    }
+
+    .hero-note {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 42px;
+      color: var(--muted);
+      font-size: .82rem;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 12px var(--gold);
+    }
+
+    /* SECTIONS */
+
+    section:not(.hero) {
+      padding: 85px 0;
+    }
+
+    .section-heading {
+      max-width: 650px;
+      margin-bottom: 38px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(1.9rem, 5vw, 3rem);
+      line-height: 1.2;
+      margin: 12px 0;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    .about {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: #0D0D0D;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .about-copy p {
+      color: var(--muted);
+      margin: 18px 0;
+    }
+
+    .feature-list {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .feature-list li {
+      padding: 15px;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      background: linear-gradient(110deg, #15140f, #0D0D0D);
+    }
+
+    .feature-list strong {
+      color: var(--light-gold);
+    }
+
+    /* CARDS */
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      padding: 26px 22px;
+      background: linear-gradient(145deg, #171612, #0D0D0D);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      transition: transform .3s, border-color .3s,
+                  box-shadow .3s;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+      border-color: var(--gold);
+      box-shadow: 0 12px 35px rgba(212,175,55,.08);
+    }
+
+    .card-icon {
+      width: 49px;
+      height: 49px;
+      display: grid;
+      place-items: center;
+      color: var(--gold);
+      font-size: 1.55rem;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 9px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .card .tag {
+      display: inline-block;
+      color: var(--gold);
+      font-size: .7rem;
+      letter-spacing: 1px;
+      margin-top: 18px;
+      text-transform: uppercase;
+    }
+
+    /* CALL TO ACTION */
+
+    .cta {
+      text-align: center;
+      background:
+        radial-gradient(ellipse at center,
+          rgba(212,175,55,.12), transparent 68%),
+        #0D0D0D;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .cta .section-heading {
+      margin: auto auto 25px;
+    }
+
+    .cta .section-heading p {
+      margin-top: 15px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 35px 0;
+      color: var(--muted);
+      font-size: .84rem;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold);
+    }
+
+    /* ANIMATIONS */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 760px) {
+      nav {
+        min-height: 68px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        padding: 20px 5%;
+        background: #0D0D0D;
+        border-bottom: 1px solid var(--line);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255,255,255,.06);
+      }
+
+      .hero {
+        min-height: 530px;
+      }
+
+      .hero-content {
+        padding: 75px 0;
+      }
+
+      .hero h1 {
+        letter-spacing: -1.5px;
+      }
+
+      .about-grid,
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      section:not(.hero) {
+        padding: 65px 0;
+      }
+
+      .about-grid {
+        gap: 15px;
+      }
+
+      .card {
+        padding: 24px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation: none !important;
+        transition: none !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<div class="header">
-  <div class="logo">G4</div>
-  <h1>GO4 TECH M21A</h1>
-  <p class="gold">TECH • M21A</p>
-  <h2 class="gold">NOS SERVICES</h2>
-</div>
-<div class="services">
-  <div class="service-card">✏️ <b>Création de logo</b></div>
-  <div class="service-card">💳 <b>Carte de visite</b></div>
-  <div class="service-card">📄 <b>CV Professionnel</b></div>
-  <div class="service-card">🖼️ <b>Affiches</b></div>
-  <div class="service-card">🎨 <b>Design graphique</b></div>
-</div>
-<div class="contact-box">
-  <h2 class="gold">CONTACT</h2>
-  <p>📞 75 69 70 23</p>
-  <a class="btn" href="https://wa.me/22675697023?text=Cliquer%20nous%20sommes%20a%20vos%20services" target="_blank">💬 Cliquer, nous sommes à vos services</a>
-  <a class="btn-gold" href="tel:+22675697023">📞 Appeler maintenant</a>
-  <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://wa.me/22675697023?text=Cliquer%20nous%20sommes%20a%20vos%20services" style="margin-top:20px;border-radius:10px;background:#fff;padding:10px">
-  <p class="gold"><b>Votre partenaire tech & design</b></p>
-</div>
-<div class="footer">L'EXCELLENCE TECHNOLOGIQUE À VOTRE SERVICE</div>
+  <header>
+    <nav class="container" aria-label="Navigation principale">
+      <a class="brand" href="#accueil" aria-label="GO4 TECH, accueil">
+        <span class="brand-mark">G4</span>
+        <span>GO4 TECH<small>M21A · DIGITAL</small></span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Ouvrir le menu" aria-expanded="false"
+        aria-controls="navLinks">☰</button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#accueil">Accueil</a>
+        <a href="#apropos">À propos</a>
+        <a href="#expertises">Expertises</a>
+        <a href="#projets">Projets</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="container">
+        <div class="hero-content">
+          <span class="eyebrow">L'innovation commence ici</span>
+
+          <h1>
+            Imagine.<br>
+            Crée.<br>
+            <span>Innove.</span>
+          </h1>
+
+          <p>
+            Bienvenue dans l'univers de GO4 TECH M21A,
+            un espace dédié à la technologie, à la créativité
+            numérique et aux idées qui préparent demain.
+          </p>
+
+          <div class="actions">
+            <a class="btn btn-primary" href="#expertises">
+              Découvrir notre univers ↗
+            </a>
+            <a class="btn btn-outline" href="#apropos">
+              En savoir plus
+            </a>
+          </div>
+
+          <div class="hero-note">
+            <span class="status-dot"></span>
+            <span>Technologie · Créativité · Avenir</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="apropos">
+      <div class="container about-grid">
+        <div class="about-copy reveal">
+          <span class="eyebrow">Notre vision</span>
+          <h2>La technologie au service des idées.</h2>
+          <p>
+            GO4 TECH M21A porte une vision tournée vers
+            l'apprentissage, l'innovation et la création
+            de solutions numériques.
+          </p>
+          <p>
+            Notre ambition : explorer les possibilités du
+            numérique, développer nos compétences et
+            transformer progressivement les idées en projets.
+          </p>
+          <a class="btn btn-outline" href="#projets">
+            Explorer les projets ↗
+          </a>
+        </div>
+
+        <ul class="feature-list reveal">
+          <li>
+            <strong>01 / Apprendre</strong><br>
+            Développer ses connaissances et ses compétences.
+          </li>
+          <li>
+            <strong>02 / Concevoir</strong><br>
+            Imaginer des solutions utiles et créatives.
+          </li>
+          <li>
+            <strong>03 / Construire</strong><br>
+            Transformer les idées en réalisations concrètes.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="expertises">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Nos domaines</span>
+          <h2>Un univers de possibilités.</h2>
+          <p>
+            Découvrir, apprendre et expérimenter les
+            technologies qui façonnent le monde numérique.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">&lt;/&gt;</div>
+            <h3>Programmation</h3>
+            <p>
+              Explorer les langages de programmation et
+              apprendre à concevoir des solutions logicielles.
+            </p>
+            <span class="tag">Code & logique</span>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">◇</div>
+            <h3>Développement web</h3>
+            <p>
+              Créer des sites web modernes, accessibles
+              et adaptés aux appareils mobiles.
+            </p>
+            <span class="tag">Web & création</span>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">✳</div>
+            <h3>Innovation numérique</h3>
+            <p>
+              Explorer de nouvelles idées et imaginer
+              des projets répondant à des besoins réels.
+            </p>
+            <span class="tag">Idées & avenir</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projets" class="about">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">De l'idée à l'action</span>
+          <h2>Chaque grande réalisation commence quelque part.</h2>
+          <p>
+            Cette vitrine a vocation à accueillir les projets,
+            les expérimentations et les réalisations de GO4 TECH M21A.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">01</div>
+            <h3>Projets numériques</h3>
+            <p>
+              Un espace pour présenter les applications
+              et les solutions développées.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">02</div>
+            <h3>Ressources informatiques</h3>
+            <p>
+              Un futur point d'accès aux supports
+              d'apprentissage et aux exercices.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">03</div>
+            <h3>Initiatives et idées</h3>
+            <p>
+              Un espace pour valoriser les initiatives
+              et les prochaines étapes du projet.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Le futur est à construire</span>
+          <h2>Les idées prennent vie grâce à l'action.</h2>
+          <p>
+            GO4 TECH M21A : une vision, une ambition,
+            un chemin vers l'innovation numérique.
+          </p>
+        </div>
+        <a class="btn btn-primary" href="#accueil">
+          Revenir à l'accueil ↑
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <a class="brand" href="#accueil">
+        <span class="brand-mark">G4</span>
+        <span>GO4 TECH<small>M21A · DIGITAL</small></span>
+      </a>
+      <div class="footer-links">
+        <a href="#apropos">À propos</a>
+        <a href="#expertises">Expertises</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <p>© <span id="year"></span> GO4 TECH M21A.</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Fermer le menu" : "Ouvrir le menu"
+      );
+      menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Ouvrir le menu");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      document.querySelectorAll(".reveal").forEach(element => {
+        observer.observe(element);
+      });
+    } else {
+      document.querySelectorAll(".reveal").forEach(element => {
+        element.classList.add("visible");
+      });
+    }
+  </script>
 </body>
-</html>
+  </html>
+  
