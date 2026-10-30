@@ -1,79 +1,96 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GO4 TECH M21A - Digital</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GO4 TECH M21A</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Segoe UI}
-body{background:#050505;color:#fff}
-header{display:flex;justify-content:space-between;align-items:center;padding:18px 5%;border-bottom:1px solid #222;background:#050505;position:sticky;top:0;z-index:10}
-.logo{display:flex;gap:12px;align-items:center}
-.logo div{border:1.5px solid #FFD700;padding:8px 12px;border-radius:10px;color:#FFD700;font-weight:900}
-.hero{display:flex;align-items:center;padding:50px 5%;min-height:85vh;background:linear-gradient(to right,#000 50%,rgba(0,0,0,0.1)), url('hero-g4.png');background-size:cover;background-position:center right}
-.hero-left{max-width:520px}
-.hero-left h4{color:#FFD700;letter-spacing:3px;font-size:11px;margin-bottom:15px}
-.hero-left h1{font-size:56px;line-height:0.95;font-weight:900}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#050505;color:#fff;font-family:Arial,sans-serif}
+header{display:flex;justify-content:space-between;align-items:center;padding:15px 20px;border-bottom:1px solid #222;position:sticky;top:0;background:#000;z-index:10}
+.logo{display:flex;gap:10px;align-items:center;color:#FFD700;font-weight:bold}
+.logo div{border:1.5px solid #FFD700;padding:6px 12px;border-radius:8px}
+nav a{color:#999;margin-left:12px;text-decoration:none;font-size:13px}
+nav a.active{color:#FFD700;border-bottom:2px solid #FFD700;padding-bottom:3px}
+.hero{max-width:1100px;margin:auto;padding:30px 20px;display:flex;gap:25px;flex-wrap:wrap;align-items:center}
+.hero-left{flex:1;min-width:280px}
+.hero-left h4{color:#FFD700;letter-spacing:2px;font-size:11px;margin-bottom:12px}
+.hero-left h1{font-size:48px;line-height:1}
 .hero-left h1 span{color:#FFD700}
-.hero-left p{color:#999;margin:18px 0 28px;line-height:1.6}
-.btn{padding:13px 20px;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px;display:inline-block;margin:5px}
+.hero-left p{color:#888;margin:15px 0 20px;line-height:1.6}
+.btn{padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:bold;display:inline-block;margin:5px 5px 5px 0;font-size:14px}
 .btn-gold{background:#FFD700;color:#000}
 .btn-black{border:1px solid #333;color:#fff}
-.box{margin:25px 5%;border-radius:18px;padding:22px;display:flex;flex-wrap:wrap;gap:20px;align-items:center}
-.box-orange{background:linear-gradient(135deg,#ff8c00,#ff6a00);color:#fff}
-.box-pay{background:#111;border:1px solid #333}
-.box-pay img{width:130px;border-radius:10px;background:#fff;padding:5px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;padding:0 5% 50px}
-.card{border:1px solid #222;border-radius:14px;padding:18px;text-align:center;background:#0a0a0a}
+.hero-right{flex:1;min-width:300px}
+.hero-right img{width:100%;border-radius:15px;border:1px solid #222}
+.pay-section{max-width:1100px;margin:20px auto;padding:0 20px}
+.pay-box{background:#101010;border:1px solid #FFD70044;border-radius:15px;padding:18px;display:flex;gap:15px;flex-wrap:wrap;align-items:center}
+.pay-box img{width:130px;border-radius:10px;border:1px solid #222}
+.cards{max-width:1100px;margin:auto;padding:20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:15px}
+.card{border:1px solid #222;border-radius:15px;padding:18px;background:#0a0a0a}
+.card h3{color:#FFD700;margin-bottom:8px}
+.card p{color:#888;font-size:13px}
+.wa-float{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;text-decoration:none;z-index:999}
+.om-float{position:fixed;bottom:90px;right:20px;background:#FF7A00;color:#fff;padding:10px 16px;border-radius:25px;text-decoration:none;font-weight:bold;z-index:999;font-size:13px}
+footer{text-align:center;padding:30px;color:#555;border-top:1px solid #222;margin-top:20px;font-size:12px}
 </style>
 </head>
 <body>
 
+<a href="https://wa.me/22675697023?text=Bonjour%20GO4%20TECH%20M21A" class="wa-float">💬</a>
+<a href="tel:*144*2*1*75697023*1000%23" class="om-float">🟠 OM</a>
+
 <header>
- <div class="logo"><div>G4</div><div>GO4 TECH<br><small style="color:#888;letter-spacing:2px;font-size:9px">M21A - DIGITAL</small></div></div>
- <div style="font-size:12px;color:#999">+226 75 69 70 23</div>
+<div class="logo"><div>G4</div> GO4 TECH M21A</div>
+<nav><a class="active" href="#">Accueil</a><a href="#">Services</a><a href="#">Contact</a></nav>
 </header>
 
-<div class="hero">
- <div class="hero-left">
-  <h4>L'INNOVATION COMMENCE ICI</h4>
-  <h1>Imagine.<br>Crée.<br><span>Innove.</span></h1>
-  <p>Bienvenue dans l'univers de GO4 TECH M21A. Commande et paye directement par WhatsApp & Orange Money.</p>
-  <a class="btn btn-gold" href="https://wa.me/22675697023?text=Bonjour%20GO4%20TECH,%20je%20viens%20de%20votre%20site%20web">Découvrir notre univers →</a>
- </div>
+<section class="hero">
+<div class="hero-left">
+<h4>✦ GO4 TECH M21A - BOBO</h4>
+<h1>APPRENDRE<br>AUJOURD'HUI<br><span>INNOVER<br>DEMAIN</span></h1>
+<p>Atelier de maintenance électronique, programmation et formation. On répare, on code, on forme.</p>
+<a class="btn btn-gold" href="https://wa.me/22675697023">WhatsApp Direct</a>
+<a class="btn btn-black" href="#payer">Payer OM</a>
 </div>
-
-<!-- BLOC ORANGE MONEY -->
-<div class="box box-orange">
- <div style="font-size:40px">📱</div>
- <div style="flex:1">
-  <h3>Paiement Orange Money & Moov Money</h3>
-  <p style="margin:6px 0;font-size:22px;font-weight:900;letter-spacing:1px">75 69 70 23</p>
-  <p style="font-size:13px;opacity:0.9">Nom : GO4 TECH M21A<br>Après paiement, envoyez la capture sur WhatsApp pour validation rapide.</p>
- </div>
- <a class="btn" style="background:#000;color:#fff" href="https://wa.me/22675697023?text=J'ai%20pay%C3%A9%20par%20Orange%20Money%20sur%2075697023,%20voici%20la%20capture">J'ai payé →</a>
+<div class="hero-right">
+<img src="p14.jpg" alt="Atelier G4">
 </div>
+</section>
 
-<!-- BLOC WHATSAPP + QR -->
-<div class="box box-pay">
- <img src="qr-whatsapp.png" alt="QR WhatsApp">
- <div style="flex:1">
-  <h3 style="color:#FFD700">Commander sur WhatsApp</h3>
-  <p style="color:#ccc;margin:8px 0;font-size:14px">Scanne le QR code ou clique sur le bouton. Réponse en moins de 5 min.</p>
-  <p style="color:#888;font-size:12px">Lien direct : wa.me/22675697023</p>
-  <a class="btn btn-gold" href="https://wa.me/22675697023?text=Bonjour%20GO4%20TECH,%20je%20veux%20commander%20:">💬 Ouvrir WhatsApp</a>
- </div>
+<div class="pay-section" id="payer">
+<div class="pay-box">
+<img src="p14.jpg" alt="G4">
+<div style="flex:1;min-width:240px">
+<h3 style="color:#FFD700">Paiement Orange Money Direct</h3>
+<p style="color:#999;font-size:13px">Numéro : <b style="color:#fff">75 69 70 23</b> - GO4 TECH M21A</p>
+<div style="display:flex;gap:8px;margin-top:12px">
+<input id="montant" type="number" placeholder="Montant (ex: 5000)" style="flex:1;padding:10px;border-radius:8px;border:1px solid #333;background:#000;color:#fff">
+<button onclick="payerOM()" style="padding:10px 14px;background:#FF7A00;color:#fff;border:none;border-radius:8px;font-weight:bold">Payer</button>
+</div>
+<p style="color:#666;font-size:11px;margin-top:6px">*144*2*1*75697023*Montant#</p>
+<div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+<a href="https://wa.me/22675697023?text=J'ai%20paye%20OM%2075697023" style="background:#25D366;color:#fff;padding:7px 12px;border-radius:8px;text-decoration:none;font-size:12px">Envoyer Reçu WhatsApp</a>
+<button onclick="navigator.clipboard.writeText('75697023');alert('Numéro 75697023 copié')" style="background:#222;color:#fff;padding:7px 12px;border-radius:8px;border:1px solid #444;font-size:12px">Copier Numéro</button>
+</div>
+</div>
+</div>
 </div>
 
 <div class="cards">
- <div class="card"><h3>Programmation</h3><p style="color:#666;font-size:12px">Du code aux apps</p></div>
- <div class="card"><h3>Développement web</h3><p style="color:#666;font-size:12px">Sites modernes</p></div>
- <div class="card"><h3>Innovation</h3><p style="color:#666;font-size:12px">Des idées aux projets</p></div>
- <div class="card"><h3>Réseaux</h3><p style="color:#666;font-size:12px">Connecter les opportunités</p></div>
+<div class="card"><h3>Maintenance PC</h3><p>Cartes mères, laptops Acer/HP, soudure, diagnostic.</p></div>
+<div class="card"><h3>Programmation</h3><p>Sites web, applis, solutions pour commerçants.</p></div>
+<div class="card"><h3>Formation</h3><p>Deviens technicien, apprends à coder.</p></div>
 </div>
 
-<!-- BOUTON FLOTTANT -->
-<a href="https://wa.me/22675697023?text=Bonjour%20GO4%20TECH" style="position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:15px 22px;border-radius:50px;text-decoration:none;font-weight:900;z-index:99;">💬 WhatsApp</a>
+<footer>GO4 TECH M21A - Bobo-Dioulasso<br>WhatsApp / OM : 75 69 70 23<br>© 2026</footer>
 
+<script>
+function payerOM(){
+ let m=document.getElementById('montant').value;
+ if(!m || m<100){alert('Montant minimum 100F');return;}
+ window.location.href='tel:*144*2*1*75697023*'+m+'%23';
+}
+</script>
 </body>
-                        </html>
+</html>
