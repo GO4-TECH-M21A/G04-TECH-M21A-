@@ -6,46 +6,33 @@
 <title>GO4 TECH M21A</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#0b0b0f;color:#fff;font-family:Inter,Arial,sans-serif}
-header{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid #222;position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(10px);z-index:20}
-.logo{display:flex;gap:10px;align-items:center;color:#FFD700;font-weight:900}
-.logo div{border:1.5px solid #FFD700;padding:7px 13px;border-radius:10px}
-.menu-btn{display:none;background:#111;border:1px solid #333;color:#fff;padding:8px 12px;border-radius:10px;font-size:18px;cursor:pointer}
-nav{display:flex;gap:6px}
-nav a{color:#aaa;padding:9px 14px;border-radius:10px;text-decoration:none;font-size:13px}
-nav a.active, nav a:hover{color:#FFD700;background:#1a1a1a}
-.hero{max-width:1100px;margin:auto;padding:36px 20px;display:flex;gap:28px;flex-wrap:wrap;align-items:center}
+body{background:#050505;color:#fff;font-family:Arial,sans-serif}
+header{display:flex;justify-content:space-between;align-items:center;padding:15px 20px;border-bottom:1px solid #222;position:sticky;top:0;background:#000;z-index:10}
+.logo{display:flex;gap:10px;align-items:center;color:#FFD700;font-weight:bold}
+.logo div{border:1.5px solid #FFD700;padding:6px 12px;border-radius:8px}
+nav a{color:#999;margin-left:12px;text-decoration:none;font-size:13px}
+nav a.active{color:#FFD700;border-bottom:2px solid #FFD700;padding-bottom:3px}
+.hero{max-width:1100px;margin:auto;padding:30px 20px;display:flex;gap:25px;flex-wrap:wrap;align-items:center}
 .hero-left{flex:1;min-width:280px}
 .hero-left h4{color:#FFD700;letter-spacing:2px;font-size:11px;margin-bottom:12px}
-.hero-left h1{font-size:50px;line-height:1.05}
+.hero-left h1{font-size:48px;line-height:1}
 .hero-left h1 span{color:#FFD700}
-.hero-left p{color:#999;margin:16px 0 20px;line-height:1.7}
-.btn{padding:13px 20px;border-radius:12px;text-decoration:none;font-weight:bold;display:inline-block;margin:5px 8px 5px 0;font-size:14px}
+.hero-left p{color:#888;margin:15px 0 20px;line-height:1.6}
+.btn{padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:bold;display:inline-block;margin:5px 5px 5px 0;font-size:14px}
 .btn-gold{background:#FFD700;color:#000}
-.btn-black{border:1px solid #333;color:#fff;background:#111}
-.btn-learn{background:#D4AF37;color:#000;padding:13px 22px;border-radius:30px;text-decoration:none;font-weight:900;display:inline-block;margin-top:12px;margin-bottom:8px}
+.btn-black{border:1px solid #333;color:#fff}
 .hero-right{flex:1;min-width:300px}
-.hero-right img{width:100%;border-radius:18px;border:1px solid #222}
-.pay-section{max-width:1100px;margin:10px auto;padding:0 20px}
-.pay-box{background:#121216;border:1px solid #FFD70044;border-radius:18px;padding:20px;display:flex;gap:16px;flex-wrap:wrap;align-items:center}
-.pay-box img{width:130px;border-radius:12px;border:1px solid #222}
-.cards{max-width:1100px;margin:auto;padding:22px 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-.card{border:1px solid #222;border-radius:18px;padding:22px;background:#111116;transition:.2s;cursor:pointer}
-.card:hover{border-color:#FFD700;transform:translateY(-3px)}
+.hero-right img{width:100%;border-radius:15px;border:1px solid #222}
+.pay-section{max-width:1100px;margin:20px auto;padding:0 20px}
+.pay-box{background:#101010;border:1px solid #FFD70044;border-radius:15px;padding:18px;display:flex;gap:15px;flex-wrap:wrap;align-items:center}
+.pay-box img{width:130px;border-radius:10px;border:1px solid #222}
+.cards{max-width:1100px;margin:auto;padding:20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:15px}
+.card{border:1px solid #222;border-radius:15px;padding:18px;background:#0a0a0a}
 .card h3{color:#FFD700;margin-bottom:8px}
-.card p{color:#999;font-size:13px;line-height:1.6}
-.card small{color:#FFD700;font-size:11px}
+.card p{color:#888;font-size:13px}
 .wa-float{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;text-decoration:none;z-index:999}
-.om-float{position:fixed;bottom:90px;right:20px;background:#FF7A00;color:#fff;padding:11px 16px;border-radius:25px;text-decoration:none;font-weight:bold;z-index:999;font-size:13px}
-footer{text-align:center;padding:30px;color:#666;border-top:1px solid #222;margin-top:20px;font-size:12px;line-height:1.8}
-input{flex:1;padding:11px;border-radius:10px;border:1px solid #333;background:#000;color:#fff;outline:none}
-@media(max-width:700px){
-.menu-btn{display:block}
-nav{position:absolute;top:65px;right:15px;left:15px;background:#111;border:1px solid #222;border-radius:15px;flex-direction:column;padding:10px;display:none}
-nav.open{display:flex}
-nav a{margin:0}
-.hero-left h1{font-size:38px}
-}
+.om-float{position:fixed;bottom:90px;right:20px;background:#FF7A00;color:#fff;padding:10px 16px;border-radius:25px;text-decoration:none;font-weight:bold;z-index:999;font-size:13px}
+footer{text-align:center;padding:30px;color:#555;border-top:1px solid #222;margin-top:20px;font-size:12px}
 </style>
 </head>
 <body>
@@ -55,8 +42,7 @@ nav a{margin:0}
 
 <header>
 <div class="logo"><div>G4</div> GO4 TECH M21A</div>
-<button class="menu-btn" onclick="toggleMenu()">☰</button>
-<nav id="menu"><a class="active" href="#">Accueil</a><a href="#services">Services</a><a href="#contact">Contact</a></nav>
+<nav><a class="active" href="#">Accueil</a><a href="#services">Services</a><a href="#contact">Contact</a></nav>
 </header>
 
 <section class="hero">
@@ -64,7 +50,7 @@ nav a{margin:0}
 <h4>✦ GO4 TECH M21A - BOBO</h4>
 <h1>APPRENDRE<br>AUJOURD'HUI<br><span>INNOVER<br>DEMAIN</span></h1>
 <p>Atelier de maintenance électronique, programmation et formation. On répare, on code, on forme.</p>
-<a href="learn.html" class="btn-learn">🎓 GO4 LEARN - BEPC/BAC 2027</a><br>
+<a href="learn.html" style="background:#D4AF37;color:#000;padding:12px 22px;border-radius:25px;text-decoration:none;font-weight:900;display:inline-block;margin-top:12px;margin-bottom:8px">🎓 GO4 LEARN - BEPC/BAC 2027</a><br>
 <a class="btn btn-gold" href="https://wa.me/22675697023">WhatsApp Direct</a>
 <a class="btn btn-black" href="#payer">Payer OM</a>
 </div>
@@ -78,45 +64,34 @@ nav a{margin:0}
 <img src="p14.jpg" alt="G4">
 <div style="flex:1;min-width:240px">
 <h3 style="color:#FFD700">Paiement Orange Money Direct</h3>
-<p style="color:#999;font-size:13px">Numéro : <b style="color:#fff">TON NUMERO AVEC ESPACES</b> - TONNOM</p>
+<p style="color:#999;font-size:13px">Numéro : <b style="color:#fff">75 69 70 23</b> - OUOBA Guillaume</p>
 <div style="display:flex;gap:8px;margin-top:12px">
-<input id="montant" type="number" placeholder="Montant (ex: 5000)">
-<button onclick="payerOM()" style="padding:11px 14px;background:#FF7A00;color:#fff;border:none;border-radius:10px;font-weight:bold;cursor:pointer">Payer</button>
+<input id="montant" type="number" placeholder="Montant (ex: 5000)" style="flex:1;padding:10px;border-radius:8px;border:1px solid #333;background:#000;color:#fff">
+<button onclick="payerOM()" style="padding:10px 14px;background:#FF7A00;color:#fff;border:none;border-radius:8px;font-weight:bold">Payer</button>
 </div>
 <p style="color:#666;font-size:11px;margin-top:6px">*144*2*1*75697023*Montant#</p>
 <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
-<a href="https://wa.me/22675697023?<text=J'ai%20paye%20OM" style="background:#25D366;color:#fff;padding:8px 12px;border-radius:10px;text-decoration:none;font-size:12px">Envoyer Reçu WhatsApp</a>
-<button onclick="copierNumero()" style="background:#222;color:#fff;padding:8px 12px;border-radius:10px;border:1px solid #444;font-size:12px;cursor:pointer">Copier Numéro</button>
+<a href="https://wa.me/22675697023?text=J'ai%20paye%20OM%2075697023" style="background:#25D366;color:#fff;padding:7px 12px;border-radius:8px;text-decoration:none;font-size:12px">Envoyer Reçu WhatsApp</a>
+<button onclick="navigator.clipboard.writeText('75697023');alert('Numéro 75697023 copié')" style="background:#222;color:#fff;padding:7px 12px;border-radius:8px;border:1px solid #444;font-size:12px">Copier Numéro</button>
 </div>
 </div>
 </div>
 </div>
 
 <div class="cards" id="services">
-<div class="card" onclick="selectCard(this)"><h3>Maintenance PC</h3><p>Cartes mères, laptops Acer/HP, soudure, diagnostic. Réparation pro à Bobo.</p><br><small>VOIR →</small></div>
-<div class="card" onclick="selectCard(this)"><h3>Programmation</h3><p>Sites web, applis, solutions pour commerçants. GO4 TECH code pour toi.</p><br><small>VOIR →</small></div>
-<div class="card" onclick="selectCard(this)"><h3>Formation</h3><p>Deviens technicien, apprends à coder et réparer. Inscriptions ouvertes.</p><br><small>VOIR →</small></div>
+<div class="card"><h3>Maintenance PC</h3><p>Cartes mères, laptops Acer/HP, soudure, diagnostic. Réparation pro à Bobo.</p></div>
+<div class="card"><h3>Programmation</h3><p>Sites web, applis, solutions pour commerçants. GO4 TECH code pour toi.</p></div>
+<div class="card"><h3>Formation</h3><p>Deviens technicien, apprends à coder et réparer. Inscriptions ouvertes.</p></div>
 </div>
 
-<footer id="contact">GO4 TECH M21A - Bobo-Dioulasso<br>WhatsApp / OM : 75697023 OUOBA Guillaume<br>© 2026 - Tous droits réservés</footer>
+<footer id="contact">GO4 TECH M21A - Bobo-Dioulasso<br>WhatsApp / OM : 75 69 70 23 - OUOBA Guillaume<br>© 2026 - Tous droits réservés</footer>
 
 <script>
-function toggleMenu(){
-  document.getElementById('menu').classList.toggle('open');
-}
-function selectCard(el){
-  document.querySelectorAll('.card').forEach(c=>c.style.borderColor='#222');
-  el.style.borderColor='#FFD700';
-}
-function copierNumero(){
-  navigator.clipboard.writeText('TONNUMERO');
-  alert('Numéro copié');
-}
 function payerOM(){
-  let m=document.getElementById('montant').value;
-  if(!m || m<100){alert('Montant minimum 100F');return;}
-  window.location.href='tel:*144*2*1*75697023*'+m+'%23';
+ let m=document.getElementById('montant').value;
+ if(!m || m<100){alert('Montant minimum 100F');return;}
+ window.location.href='tel:*144*2*1*75697023*'+m+'%23';
 }
 </script>
 </body>
- </html>
+</html>
